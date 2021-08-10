@@ -6,35 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TH_Tạo menu dọc</title>
     <style>
+      
+      
+        
+        html{
+            font-family: arial;
+            
+        }
+        #menu li a{
+            color: white;
+            font-size: 20px;
+            text-decoration: none; /*xoá gạch chân trong thẻ a*/
 
-        /*#menu ul li a{
-            text-decoration: none;
-        }*/
+        }
+       #menu, #menu ul, #menu li
+        {
+            padding: 0;
+            margin: 0;
+            
+        }
+        #menu li
+        {
+            list-style: none;/*bỏ đi các ký hiệu đánh dấu đầu mỗi phần tử của ul, li trong danh sách */
+            position:relative; /*cho phép các danh sách con được đặt cạnh phần tử chứa nó*/
+            width: 100px; /*Cố định chiều rộng và chiều cao của một phần tử trong danh sách.*/
+            height: 30px;/* như trên*/
+            padding: 0 20px; /*cố định lề trái, phải, dành cho các nội dung bên trong danh sách li với khung viền của nó*/
+            background-color: black; /*màu nền sang màu đen cho tất cả phần tử trong danh sách*/
+            line-height: 30px; /*cố định tỉ lệ chiều cao cho mỗi dòng văn bản trong phần tử cua danh sach*/
+            cursor: pointer; /*chuyển biểu tượng của con trỏ màn hình sáng hình bàn tay*/
+        }
+        #menu li:hover{
+            background-color:blue;
+        }
+        #menu ul ul /*đặt tại thẻ con của kế thẻ cha là ul */
+        {
+            position: absolute;
+            top: 0;
+            left: 140.5px; 
+            visibility: hidden; /*ẩn thẻ con trong ul ul*/
+        }
+        #menu ul li:hover ul 
+        {
+            visibility: visible; /*khi đưa con chỏ vào các phần tử sẽ hiện lên*/
+        }
+
     </style>
 </head>
 <body>
+    <h3>ACCP i10</h3>
     <div id="menu">
         <ul >
-            <li><a href="#">Sem 1</a>
-        <ul>
-            <li><a href="#">Computing Fundametal</a></li>
-            <li><a href="#">C Programming</a></li>
-            <li><a href="#">Building Dynamic Website</a></li>
-            <li><a href="#">MS Transact-SQL</a></li>
-            <li><a href="#">Project</a></li>
-        </ul>
+                    <li><a href="#">Sem 1</a>
+                <ul>
+                    <li><a href="#">Computing Fundametal</a></li>
+                    <li><a href="#">C Programming</a></li>
+                    <li><a href="#">Building Dynamic Website</a></li>
+                    <li><a href="#">MS Transact-SQL</a></li>
+                    <li><a href="#">Project</a></li>
+                </ul>
+            
             </li>
-            <li><a href="Sen 2"></a>
-            <ul>
-                <li><a href="#">Cloud Computing</a></li>
-                <li><a href="#">APJ - I</a></li>
-                <li><a href="#">APJ - II</a></li>
-                <li><a href="#">APJ - III</a></li>
-                <li><a href="#">eProject</a></li>
-            </ul>
+            <li><a href="#">Sen 2</a>
+                <ul>
+                    <li><a href="#">Cloud Computing</a></li>
+                    <li><a href="#">APJ - I</a></li>
+                    <li><a href="#">APJ - II</a></li>
+                    <li><a href="#">APJ - III</a></li>
+                    <li><a href="#">eProject</a></li>
+                </ul>
             </li>
+            <li><a href="#">Sem 3</a>
+                <ul>
+                    <li><a href="#">Leve 01</a></li>
+                    <li><a href="#">Leve 02</a></li>
+                    <li><a href="#">Leve 03</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Sem 4</a>
 
+                <ul>
+                    <li><a href="#">Number 1</a></li>
+                    <li><a href="#">Number 2</a></li>
+                    <li><a href="#">Number 3</a></li>
+                    <li><a href="#">Number 4</a></li>
 
+                </ul>
+
+            </li>
         </ul>
     </div>
 </body>
